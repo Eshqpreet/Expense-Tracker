@@ -1,7 +1,7 @@
 import passport from "passport";
 import bcrypt from "bcryptjs";
 import User from "../models/user.model.js";
-import { GrapgQLLocalStrategy } from "graphql-passport";
+import { GraphQLLocalStrategy } from "graphql-passport";
 
 // Function to configure passport strategies and serialization
 export const configurePassport = async () => {
@@ -24,7 +24,7 @@ export const configurePassport = async () => {
 
     // Define the local strategy for authentication using username and password
     passport.use(
-        new GrapgQLLocalStrategy(async (username, password, done) => {
+        new GraphQLLocalStrategy(async (username, password, done) => {
             try {
                 // Find the user by username
                 const user = await User.findOne({ username });
