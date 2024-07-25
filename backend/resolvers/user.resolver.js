@@ -133,7 +133,7 @@ const userResolver = {
             }
         },
     },
-    // TODO => ADD USER/TRANSACTION RELATION
+    // TODO: ADD USER/TRANSACTION RELATION
 };
 
 export default userResolver;

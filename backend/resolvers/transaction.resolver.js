@@ -25,7 +25,7 @@ const transactionResolver = {
             }
         },
 
-        // TODO => ADD categoryStatistics Query
+        // TODO: ADD categoryStatistics Query
     },
     Mutation: {
         createTransaction: async (_, { input }, context) => {
@@ -61,7 +61,7 @@ const transactionResolver = {
                 throw new Error("Error deleting transaction");
             }
         },
-        // TODO => ADD TRANSACTION/USER RELATIONSHIP
+        // TODO: ADD TRANSACTION/USER RELATIONSHIP
     },
 }
 
