@@ -24,10 +24,14 @@ import mergedTypeDefs from './typeDefs/index.js';
 // DB import
 import { connectDB } from './db/connectDB.js';
 
+import job from './cron.js';
+
 const __dirname = path.resolve();
 const app = express();
 dotenv.config();
 configurePassport();
+
+job.start();
 
 // Our httpServer handles incoming requests to our Express app.
 // Below, we tell Apollo Server to "drain" this httpServer,
