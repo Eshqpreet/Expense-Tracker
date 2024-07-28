@@ -9,12 +9,19 @@ type Transaction{
     amount:Float!
     location:String
     date:String!
+    user: User!
 }
 
 type Query{
     transactions:[Transaction!]
     transaction(transactionId:ID!):Transaction
+    categoryStatistics:[CategoryStatistics!]
     # TODO: ADD categoryStatistics Query
+}
+
+type CategoryStatistics{
+    category:String!
+    totalAmount:Float!
 }
 
 type Mutation{
