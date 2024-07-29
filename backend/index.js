@@ -90,6 +90,11 @@ app.use(
     }),
 );
 
+// Serve sitemap.xml
+app.get('/sitemap.xml', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend/sitemap.xml'));
+});
+
 app.use(express.static(path.join(__dirname, "frontend/dist")));
 
 // npm run build will build your frontend app, and it will be the optimized version of your app.
